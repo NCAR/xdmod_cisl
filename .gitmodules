@@ -1,0 +1,18 @@
+[submodule "xdmod_distro"]
+	path = xdmod_distro
+	url = https://github.com/NCAR/xdmod_distro
+[submodule "xdmod_cisl_webapp"]
+	path = xdmod_cisl_webapp
+	url = https://github.com/NCAR/xdmod_distro
+[submodule "webapp"]
+	path = webapp
+	url = https://github.com/NCAR/xdmod_cisl_webapp
+[submodule "logingest"]
+	path = logingest
+	url = https://github.com/NCAR/xdmod_cisl_logingest
+[submodule "db"]
+	path = db
+	url = https://github.com/NCAR/xdmod_cisl_db
+[submodule "base"]
+	path = base
+	url = https://github.com/NCAR/xdmod_cisl_base
