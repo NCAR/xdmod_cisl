@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+
+  logingest:
+    image: cisl-repo/xdmod_cisl_logingest:${TAG_logingest}
+    volumes:
+      - ${VOLMAP_SECRETS}:/run/secrets
+      - ${VOLMAP_LOGS}:/var/log
+      - ${VOLMAP_APP_DATA}:/var/xdmod
+    env_file:
+      - deploy.env
+    command: [ "/bin/bash" ]
+
+  webapp:
+    image: cisl-repo/xdmod_cisl_webapp:${TAG_webapp}
+    volumes:
+      - "${VOLMAP_SECRETS}:/run/secrets"
+      - "${VOLMAP_LOGS}:/var/log"
+    ports:
+      - "${PORTMAP_WEBAPP}:8080"
+    env_file:
+      - deploy.env
+
+#  db:
+#    image: cisl-repo/xdmod_cisl_db:${TAG_db}
+#    volumes:
+#      - ${VOLMAP_SECRETS}:/run/secrets
+#      - ${VOLMAP_LOGS}:/var/log
+#      - ${VOLMAP_DB_DATA}:/var/lib/mysql
+#    ports:
+#      - "${PORTMAP_DB}:3306"
+#    env_file:
+#      - deploy.env
+#    environment:
+#      - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/mysql-root-password
+

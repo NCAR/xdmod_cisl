@@ -1,0 +1,16 @@
+# Copy this to .env and edit it for use by docker-compose.
+
+TAG_distro=latest
+TAG_base=latest
+TAG_logingest=latest
+TAG_webapp=latest
+TAG_db=latest
+TAG_dbinit=latest
+
+VOLMAP_SECRETS=secrets
+VOLMAP_LOGS=logs
+VOLMAP_APP_DATA=app_data
+VOLMAP_DB_DATA=db_data
+
+PORTMAP_WEBAPP=
+PORTMAP_DB=
