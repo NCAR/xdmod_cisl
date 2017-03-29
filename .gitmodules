@@ -1,15 +1,20 @@
 [submodule "xdmod_distro"]
 	path = xdmod_distro
 	url = https://github.com/NCAR/xdmod_distro
+	branch = master
 [submodule "webapp"]
 	path = webapp
 	url = https://github.com/NCAR/xdmod_cisl_webapp
+	branch = master
 [submodule "logingest"]
 	path = logingest
 	url = https://github.com/NCAR/xdmod_cisl_logingest
+	branch = master
 [submodule "db"]
 	path = db
 	url = https://github.com/NCAR/xdmod_cisl_db
+	branch = master
 [submodule "base"]
 	path = base
 	url = https://github.com/NCAR/xdmod_cisl_base
+	branch = master
