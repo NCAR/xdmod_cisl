@@ -1,0 +1,16 @@
+#Systemd for docker compose
+[Unit]
+Description=XDMOD Docker Compose service
+Requires=docker.service
+After=network.target docker.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/vagrant/xdmod_cisl
+#ExecStartPre=/usr/local/bin/docker-compose -f /home/vagrant/xdmod_cisl/docker-compose.yml down
+ExecStart=/usr/local/bin/docker-compose -f /home/vagrant/xdmod_cisl/docker-compose.yml up --abort-on-container-exit
+ExecStop=/usr/local/bin/docker-compose -f /home/vagrant/xdmod_cisl/docker-compose.yml stop
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
