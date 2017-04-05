@@ -10,7 +10,6 @@ services:
       - ${VOLMAP_APP_DATA}:/var/xdmod
     env_file:
       - deploy.env
-    command: [ "/bin/bash" ]
 
   webapp:
     image: cisl-repo/xdmod_cisl_webapp:${TAG_webapp}
