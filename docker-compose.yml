@@ -8,8 +8,12 @@ services:
       - ${VOLMAP_SECRETS}:/run/secrets
       - ${VOLMAP_LOGS}:/var/log
       - ${VOLMAP_APP_DATA}:/var/xdmod
+    networks:
+      - default
+      - mail
     env_file:
       - deploy.env
+    command: /bin/bash
 
   webapp:
     image: cisl-repo/xdmod_cisl_webapp:${TAG_webapp}
@@ -18,6 +22,9 @@ services:
       - "${VOLMAP_LOGS}:/var/log"
     ports:
       - "${PORTMAP_WEBAPP}:8080"
+    networks:
+      - default
+      - mail
     env_file:
       - deploy.env
 
@@ -29,6 +36,8 @@ services:
       - ${VOLMAP_DB_DATA}:/var/lib/mysql
     ports:
       - "${PORTMAP_DB}:3306"
+    networks:
+      - default
     env_file:
       - deploy.env
     environment:
@@ -50,3 +59,9 @@ volumes:
   logs:
   app_data:
   db_data:
+
+networks:
+  default:
+  mail:
+    external:
+      name: mail

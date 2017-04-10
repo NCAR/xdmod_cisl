@@ -8,6 +8,9 @@ services:
       - ${VOLMAP_SECRETS}:/run/secrets
       - ${VOLMAP_LOGS}:/var/log
       - ${VOLMAP_APP_DATA}:/var/xdmod
+    networks:
+      - default
+      - mail
     env_file:
       - deploy.env
     command: [ "/bin/bash" ]
@@ -19,6 +22,9 @@ services:
       - "${VOLMAP_LOGS}:/var/log"
     ports:
       - "${PORTMAP_WEBAPP}:8080"
+    networks:
+      - default
+      - mail
     env_file:
       - deploy.env
 
@@ -34,4 +40,10 @@ services:
 #      - deploy.env
 #    environment:
 #      - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/mysql-root-password
+
+networks:
+  default:
+  mail:
+    external:
+      name: mail
 
