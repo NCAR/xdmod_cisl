@@ -1,0 +1,16 @@
+#Systemd for docker compose
+[Unit]
+Description=CISL/SWEG XDMOD as a dockerized service
+Requires=docker.service
+After=network.target docker.service docker-postfix
+
+[Service]
+Type=simple
+WorkingDirectory=/usr/local/docker/xdmod_cisl/test
+ExecStartPre=/usr/local/bin/docker-compose down
+ExecStart=/usr/local/bin/docker-compose up --abort-on-container-exit
+ExecStop=/usr/local/bin/docker-compose stop
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
