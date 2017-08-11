@@ -20,7 +20,7 @@ services:
       - "${VOLMAP_SECRETS}:/run/secrets"
       - "${VOLMAP_LOGS}:/var/log"
     ports:
-      - "${PORTMAP_WEBAPP}:8080"
+      - "${PORTMAP_WEBAPP}:443"
     networks:
       - default
       - mail
