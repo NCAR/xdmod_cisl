@@ -3,3 +3,5 @@
 **/*~
 **/*.swp
 build.log
+dev/.env
+dev/deploy.env

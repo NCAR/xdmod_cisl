@@ -4,3 +4,4 @@ db
 dbinit
 logingest
 webapp
+mongodb
