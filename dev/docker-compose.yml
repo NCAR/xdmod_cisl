@@ -15,6 +15,19 @@ services:
     env_file:
       - deploy.env
 
+  supremm:
+    image: cisl-repo/xdmod_cisl_supremm:${TAG_supremm}
+    volumes:
+      - ${VOLMAP_SECRETS}:/run/secrets
+      - ${VOLMAP_LOGS}:/var/log
+      - ${VOLMAP_APP_DATA}:/var/xdmod
+      - ${VOLMAP_XCB}:/xcb
+    networks:
+      - default
+      - mail
+    env_file:
+      - deploy.env
+
   webapp:
     image: cisl-repo/xdmod_cisl_webapp:${TAG_webapp}
     volumes:
