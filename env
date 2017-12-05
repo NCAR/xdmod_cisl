@@ -5,12 +5,15 @@ TAG_base=latest
 TAG_logingest=latest
 TAG_webapp=latest
 TAG_db=latest
+TAG_mongodb=latest
 TAG_dbinit=latest
 
 VOLMAP_SECRETS=secrets
 VOLMAP_LOGS=logs
-VOLMAP_APP_DATA=app_data
+VOLMAP_ACCT_DATA=acct_data
 VOLMAP_DB_DATA=db_data
+VOLMAP_MONGODB_DATA=mongodb_data
 
 PORTMAP_WEBAPP=
 PORTMAP_DB=
+PORTMAP_MONGODB=
