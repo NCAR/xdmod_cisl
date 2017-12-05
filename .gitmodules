@@ -22,3 +22,7 @@
 	path = mongodb
 	url = https://github.com/NCAR/xdmod_cisl_mongodb
 	branch = master
+[submodule "supremm"]
+	path = supremm
+	url = https://github.com/NCAR/xdmod_cisl_supremm
+	branch = master
