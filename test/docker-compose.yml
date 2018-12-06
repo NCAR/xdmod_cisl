@@ -15,7 +15,7 @@ services:
       - deploy.env
 
   webapp:
-    image: cisl-repo/xdmod_cisl_webapp:1.6
+    image: cisl-repo/xdmod_cisl_webapp:1.7
     volumes:
       - /etc/xdmod/secrets:/run/secrets
       - /var/log/xdmod:/var/log
