@@ -3,7 +3,7 @@ version: '3'
 services:
 
   logingest:
-    image: cisl-repo/xdmod_cisl_logingest:1.6
+    image: cisl-repo/xdmod_cisl_logingest:1.8
     volumes:
       - /etc/xdmod/secrets:/run/secrets
       - /var/log/xdmod:/var/log
@@ -15,7 +15,7 @@ services:
       - deploy.env
 
   webapp:
-    image: cisl-repo/xdmod_cisl_webapp:1.7
+    image: cisl-repo/xdmod_cisl_webapp:1.8
     volumes:
       - /etc/xdmod/secrets:/run/secrets
       - /var/log/xdmod:/var/log
