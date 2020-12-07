@@ -3,7 +3,7 @@ version: '3'
 services:
 
   logingest:
-    image: cisl-repo/xdmod_cisl_logingest:1.8
+    image: cisl-repo/xdmod_cisl_logingest:1.9
     volumes:
       - /etc/xdmod/secrets:/run/secrets
       - /var/log/xdmod:/var/log
